@@ -7,6 +7,7 @@ export type Location = {
   state: string;
   zip: string;
   country: string;
+  mapLink?: string;
   mapEmbed?: string;
   hours?: {
     monday: string;

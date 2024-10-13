@@ -15,27 +15,39 @@ const NavbarTop = () => {
   return (
     <div className="bg-primary text-white">
       <div className="flex justify-between container mx-auto text-sm py-3 px-4">
-        <span className="hidden lg:flex items-center gap-2">
-          <Mail className="h-4 w-4" />
-          <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
-        </span>
-        <span className="flex items-center gap-2">
-          <Phone className="h-4 w-4" />
-          <a href={`tel:${companyInfo.phone}`}>{formatPhoneNumber(companyInfo.phone)}</a>
-        </span>
+        {companyInfo.email && (
+          <span className="hidden lg:flex items-center gap-2">
+            <Mail className="h-4 w-4" />
+            <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
+          </span>
+        )}
+        {companyInfo.phone && (
+          <span className="flex items-center gap-2">
+            <Phone className="h-4 w-4" />
+            <a href={`tel:${companyInfo.phone}`}>{formatPhoneNumber(companyInfo.phone)}</a>
+          </span>
+        )}
         <div className="flex gap-6">
-          <a href={companyInfo.social.facebook} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFacebookF} className="h-4 w-4" />
-          </a>
-          <a href={companyInfo.social.instagram} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} className="h-4 w-4" />
-          </a>
-          <a href={companyInfo.social.youtube} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" />
-          </a>
-          <a href={companyInfo.social.twitter} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faXTwitter} className="h-4 w-4" />
-          </a>
+          {companyInfo.social.facebook && (
+            <a href={companyInfo.social.facebook} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebookF} className="h-4 w-4" />
+            </a>
+          )}
+          {companyInfo.social.instagram && (
+            <a href={companyInfo.social.instagram} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} className="h-4 w-4" />
+            </a>
+          )}
+          {companyInfo.social.youtube && (
+            <a href={companyInfo.social.youtube} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" />
+            </a>
+          )}
+          {companyInfo.social.twitter && (
+            <a href={companyInfo.social.twitter} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faXTwitter} className="h-4 w-4" />
+            </a>
+          )}
         </div>
       </div>
     </div>
