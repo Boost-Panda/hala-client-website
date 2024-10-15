@@ -91,12 +91,12 @@ const Locations = memo(() => {
               <CardFooter>
                 <div className="w-full flex gap-4">
                   <Link
-                    className={buttonVariants({ variant: 'secondary', className: 'w-1/2 !font-bold' })}
+                    className={buttonVariants({ variant: 'secondary', className: 'w-1/3 lg:w-1/2 !font-bold' })}
                     href={`tel:${location.phone}`}
                   >
                     Call Us
                   </Link>
-                  <Link className={buttonVariants({ className: 'w-1/2 !font-bold' })} href={`/contact`}>
+                  <Link className={buttonVariants({ className: 'w-2/3 lg:w-1/2 !font-bold' })} href={`/contact`}>
                     Request Appointment
                   </Link>
                 </div>

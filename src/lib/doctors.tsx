@@ -1,4 +1,5 @@
 export type Doctor = {
+  slug: string;
   name: string;
   image: string;
   title: string;
@@ -7,6 +8,7 @@ export type Doctor = {
 
 export const doctors: Doctor[] = [
   {
+    slug: 'dr-chaudhary',
     name: 'Nahla Chaudhary',
     image: '/doctors/nahla-chaudhary.webp',
     title: 'DDS',
@@ -52,6 +54,7 @@ export const doctors: Doctor[] = [
     ),
   },
   {
+    slug: 'dr-nelson',
     name: 'Howard L. Nelson',
     image: '/doctors/howard-nelson.webp',
     title: 'DDS',
@@ -85,7 +88,7 @@ export const doctors: Doctor[] = [
         <p>
           Dr. Nelson practices a full range of oral and maxillofacial surgery with a keen interest in the following:
         </p>
-        <ul>
+        <ul className="list-disc list-inside">
           <li>Endosseous implants</li>
           <li>Facial trauma</li>
           <li>Facial reconstruction</li>
@@ -95,6 +98,7 @@ export const doctors: Doctor[] = [
     ),
   },
   {
+    slug: 'dr-haddad',
     name: 'Jay I. Haddad',
     image: '/doctors/jay-haddad.webp',
     title: 'DDS',
