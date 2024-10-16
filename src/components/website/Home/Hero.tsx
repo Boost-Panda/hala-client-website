@@ -27,7 +27,7 @@ const Hero = memo(function Hero() {
           <Link className={buttonVariants({ size: 'lg', className: 'mt-6' })} href={companyInfo.mainCTA.href}>
             {companyInfo.mainCTA.name}
           </Link>
-          <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <div className="flex gap-4 mt-6">
             <Link
               className={buttonVariants({ variant: 'outline' })}
               href={companyInfo.social?.facebook ?? ''}

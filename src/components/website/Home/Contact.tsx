@@ -4,7 +4,12 @@ import { companyInfo } from '@/lib/companyInfo';
 const Contact = memo(function Contact() {
   return (
     <div>
-      <iframe src={companyInfo.contactForm} width="100%" height="700rem" id="myIframe"></iframe>
+      <iframe
+        src={companyInfo.contactForm}
+        width="100%"
+        className="h-[60rem] md:h-[44rem]"
+        id="myIframe"
+      ></iframe>
     </div>
   );
 });

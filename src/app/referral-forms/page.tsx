@@ -16,9 +16,13 @@ const ReferralForms = () => {
           The security and privacy of patient data is one of our primary concerns and we have taken every precaution to
           protect it.
         </p>
-        <div className="flex gap-4 mb-8">
+        <div className="flex gap-4 mb-8 flex-wrap">
           {locations.map((location) => (
-            <Link href={location.referralForm || ''} key={location.name} className={buttonVariants({ })}>
+            <Link
+              href={location.referralForm || ''}
+              key={location.name}
+              className={buttonVariants({ className: 'w-full md:w-auto' })}
+            >
               {location.name}
             </Link>
           ))}

@@ -20,7 +20,8 @@ const Gallery = memo(() => {
             width={300}
             height={200}
             loading="lazy"
-            className="rounded-lg object-cover h-40"
+            className="rounded-lg object-cover h-60 md:h-40 md:w-[300px]"
+            sizes="(max-width: 768px) 100vw, 300px"
           />
         ))}
       </div>

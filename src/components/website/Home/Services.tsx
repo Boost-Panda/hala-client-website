@@ -12,13 +12,19 @@ const Services = memo(() => {
 
       <div className="flex flex-wrap justify-center items-center">
         {services.map((service) => (
-          <div key={service.name} className="w-full md:w-1/2 lg:w-1/3 p-10">
+          <div key={service.name} className="w-full md:w-1/2 lg:w-1/3 md:p-4 lg:p-10">
             <Card>
-              <CardImage src={service.image} alt={service.name} width={400} height={500} className="aspect-[2/1.4]" />
+              <CardImage
+                src={service.image}
+                alt={service.name}
+                width={400}
+                height={500}
+                className="aspect-[2/1.4] object-cover"
+              />
               <CardHeader>
                 <CardTitle>{service.name}</CardTitle>
               </CardHeader>
-              <CardContent className="min-h-[11em]">{service.description}</CardContent>
+              <CardContent className="md:min-h-[14em] lg:min-h-[11em]">{service.description}</CardContent>
             </Card>
           </div>
         ))}

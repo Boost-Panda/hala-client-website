@@ -22,9 +22,13 @@ const PatientRegistration = () => {
           the security and privacy of every patient’s personal data as if it were our own. Hence, we have implemented
           stringent measures to ensure its complete confidentiality.
         </p>
-        <div className="flex gap-4 mb-4">
+        <div className="flex gap-4 mb-4 flex-wrap">
           {locations.map((location) => (
-            <Link className={buttonVariants({})} href={location.registrationForm || ''} key={location.name}>
+            <Link
+              className={buttonVariants({ className: 'w-full md:w-auto' })}
+              href={location.registrationForm || ''}
+              key={location.name}
+            >
               {location.name}
             </Link>
           ))}
