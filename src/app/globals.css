@@ -76,3 +76,36 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.markdown {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  p {
+    @apply text-base;
+  }
+  ul {
+    @apply list-disc ml-4;
+  }
+  ol {
+    @apply list-decimal ml-4;
+  }
+  li {
+    @apply text-base;
+  }
+  img {
+    @apply w-full;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      @apply w-1/2;
+    }
+  }
+}
