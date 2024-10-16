@@ -22,6 +22,7 @@ const ReferralForms = () => {
               href={location.referralForm || ''}
               key={location.name}
               className={buttonVariants({ className: 'w-full md:w-auto' })}
+              target="_blank"
             >
               {location.name}
             </Link>

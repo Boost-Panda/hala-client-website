@@ -28,6 +28,7 @@ const PatientRegistration = () => {
               className={buttonVariants({ className: 'w-full md:w-auto' })}
               href={location.registrationForm || ''}
               key={location.name}
+              target="_blank"
             >
               {location.name}
             </Link>

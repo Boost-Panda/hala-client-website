@@ -1,8 +1,13 @@
-import Layout from '@/components/website/Layout';
 import Image from 'next/image';
-import { doctors } from '@/lib/doctors';
-import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
+import Layout from '@/components/website/Layout';
 import Locations from '@/components/website/Locations';
+
+import { buttonVariants } from '@/components/ui/button';
+
+import { companyInfo } from '@/lib/companyInfo';
+import { doctors } from '@/lib/doctors';
 
 const DoctorPage = ({ params }: { params: { doctor: string } }) => {
   const doctor = doctors.find((doctor) => doctor.slug === params.doctor);
@@ -22,7 +27,13 @@ const DoctorPage = ({ params }: { params: { doctor: string } }) => {
           <div className="col-span-2 space-y-4">
             <h2 className="text-2xl font-semibold">About {doctor?.name}</h2>
             <div className="space-y-4">{doctor?.about}</div>
-            <Button className="!mt-8">Book an Appointment</Button>
+            <Link
+              className={buttonVariants({ className: '!mt-8' })}
+              href={companyInfo.requestAppointmentForm}
+              target="_blank"
+            >
+              Book an Appointment
+            </Link>
           </div>
         </div>
         <Locations />
