@@ -27,7 +27,7 @@ const MeetOurDoctors = memo(function MeetOurDoctors() {
                 <div className="w-full">
                   <Link
                     className={buttonVariants({ variant: 'secondary', className: 'w-full !font-bold' })}
-                    href={`/doctors/${doctor.name}`}
+                    href={`/about/${doctor.slug}`}
                   >
                     See Profile
                   </Link>

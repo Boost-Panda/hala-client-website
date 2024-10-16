@@ -45,6 +45,7 @@ const NavbarMobile = () => {
                                         <Link
                                           href={grandchild.href || ''}
                                           className="block select-none space-y-1 rounded-md p-2 hover:bg-accent hover:text-accent-foreground text-sm"
+                                          target={grandchild.external ? '_blank' : '_self'}
                                         >
                                           {grandchild.name}
                                         </Link>
@@ -58,6 +59,7 @@ const NavbarMobile = () => {
                             <Link
                               href={child.href || ''}
                               className="block select-none py-3 rounded-md hover:bg-accent hover:text-accent-foreground text-sm font-medium"
+                              target={child.external ? '_blank' : '_self'}
                             >
                               {child.name}
                             </Link>
@@ -69,7 +71,12 @@ const NavbarMobile = () => {
                 </AccordionItem>
               </Accordion>
             ) : (
-              <Link key={link.name} href={link.href || ''} className="text-muted-foreground pb-2">
+              <Link
+                key={link.name}
+                href={link.href || ''}
+                className="text-muted-foreground pb-2"
+                target={link.external ? '_blank' : '_self'}
+              >
                 {link.name}
               </Link>
             )
@@ -77,7 +84,9 @@ const NavbarMobile = () => {
 
           <div className="mt-6 ml-auto">
             <Button size="lg" asChild>
-              <Link href={companyInfo.mainCTA.href}>{companyInfo.mainCTA.name}</Link>
+              <Link href={companyInfo.mainCTA.href} target="_blank">
+                {companyInfo.mainCTA.name}
+              </Link>
             </Button>
           </div>
         </nav>

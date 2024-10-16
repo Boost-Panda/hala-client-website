@@ -25,6 +25,8 @@ export type Location = {
     youtube?: string;
     twitter?: string;
   };
+  registrationForm?: string;
+  referralForm?: string;
 }
 
 export interface CompanyInfo {
@@ -42,6 +44,8 @@ export interface CompanyInfo {
     name: string;
     href: string;
   };
+  contactForm: string;
+  requestAppointmentForm: string;
 }
 
 export type NavLink = {

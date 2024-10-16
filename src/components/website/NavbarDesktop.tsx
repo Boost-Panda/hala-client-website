@@ -72,7 +72,11 @@ const NavbarDesktop = () => {
                             <DropdownMenuSubContent className="w-[200px]">
                               {childLink.children.map((grandChildLink) => (
                                 <DropdownMenuItem key={grandChildLink.name} asChild>
-                                  <Link href={grandChildLink.href || '#'} className="w-full cursor-pointer">
+                                  <Link
+                                    href={grandChildLink.href || '#'}
+                                    className="w-full cursor-pointer"
+                                    target={grandChildLink.external ? '_blank' : '_self'}
+                                  >
                                     {grandChildLink.name}
                                   </Link>
                                 </DropdownMenuItem>
@@ -81,7 +85,11 @@ const NavbarDesktop = () => {
                           </DropdownMenuSub>
                         ) : (
                           <DropdownMenuItem asChild>
-                            <Link href={childLink.href || '#'} className="w-full cursor-pointer">
+                            <Link
+                              href={childLink.href || '#'}
+                              className="w-full cursor-pointer"
+                              target={childLink.external ? '_blank' : '_self'}
+                            >
                               {childLink.name}
                             </Link>
                           </DropdownMenuItem>
@@ -92,7 +100,11 @@ const NavbarDesktop = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link href={'#'} className="text-muted-foreground hover:text-foreground">
+              <Link
+                href={link.href || '#'}
+                className="text-muted-foreground hover:text-foreground"
+                target={link.external ? '_blank' : '_self'}
+              >
                 {link.name}
               </Link>
             )}

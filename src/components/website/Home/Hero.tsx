@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import { memo } from 'react';
 
 import Image from 'next/image';
@@ -5,6 +6,13 @@ import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 
 import { companyInfo } from '@/lib/companyInfo';
+
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+const FontAwesomeIcon = dynamic(() => import('@fortawesome/react-fontawesome').then((mod) => mod.FontAwesomeIcon), {
+  loading: () => <div className="w-4 h-4 bg-primary animate-pulse"></div>,
+  ssr: false,
+});
 
 const Hero = memo(function Hero() {
   return (
@@ -19,6 +27,24 @@ const Hero = memo(function Hero() {
           <Link className={buttonVariants({ size: 'lg', className: 'mt-6' })} href={companyInfo.mainCTA.href}>
             {companyInfo.mainCTA.name}
           </Link>
+          <div className="flex flex-col md:flex-row gap-4 mt-6">
+            <Link
+              className={buttonVariants({ variant: 'outline' })}
+              href={companyInfo.social?.facebook ?? ''}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faFacebookF} className="h-4 w-4 text-[#1877F2]" />
+            </Link>
+            <Link
+              className={buttonVariants({ variant: 'outline' })}
+              href={companyInfo.social?.instagram ?? ''}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="h-4 w-4 text-[#E1306C]" />
+            </Link>
+          </div>
           <Image
             src="/site-images/team-photo.webp"
             alt="Team Photo"

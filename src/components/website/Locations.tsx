@@ -5,7 +5,7 @@ import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 
 import { locations } from '@/lib/locations';
-
+import { companyInfo } from '@/lib/companyInfo';
 import { formatPhoneNumber } from '@/lib/utils';
 
 const Locations = memo(() => {
@@ -96,7 +96,11 @@ const Locations = memo(() => {
                   >
                     Call Us
                   </Link>
-                  <Link className={buttonVariants({ className: 'w-2/3 lg:w-1/2 !font-bold' })} href={`/contact`}>
+                  <Link
+                    className={buttonVariants({ className: 'w-2/3 lg:w-1/2 !font-bold' })}
+                    href={companyInfo.requestAppointmentForm}
+                    target="_blank"
+                  >
                     Request Appointment
                   </Link>
                 </div>

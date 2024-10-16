@@ -141,7 +141,7 @@ export const navLinks: NavLink[] = [
       },
       {
         name: 'Surgical Instructions',
-        href: '/surgical-instructions',
+        href: '/patient-resources/surgical-instructions',
       },
     ],
   },

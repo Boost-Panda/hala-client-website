@@ -35,7 +35,9 @@ const Navbar = () => {
         </Link>
         <div className="ml-auto">
           <Button className="shrink-0">
-            <Link href={companyInfo.mainCTA.href}>{companyInfo.mainCTA.name}</Link>
+            <Link href={companyInfo.mainCTA.href} target="_blank">
+              {companyInfo.mainCTA.name}
+            </Link>
           </Button>
         </div>
         <div className="lg:hidden">
