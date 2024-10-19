@@ -13,7 +13,7 @@ const MeetOurDoctors = memo(function MeetOurDoctors() {
 
       <div className="flex flex-wrap w-full">
         {doctors.map((doctor) => (
-          <div key={doctor.name} className="w-full md:w-1/3 md:p-2 lg:p-6">
+          <div key={doctor.name} className="w-full md:w-1/3 p-2 lg:p-6">
             <Card>
               <CardImage src={doctor.image} alt={doctor.name} width={400} height={500} />
               <CardHeader>

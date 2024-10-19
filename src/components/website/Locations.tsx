@@ -13,7 +13,7 @@ const Locations = memo(() => {
     <div>
       <h2 className="text-4xl font-bold text-center mb-12">Accessible Care at Three Convenient Locations</h2>
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {locations.map((location) => (
           <div key={location.name} className="w-full md:w-1/2 lg:w-1/3 p-2">
             <Card>
@@ -22,10 +22,10 @@ const Locations = memo(() => {
                   src={location.mapEmbed}
                   width="100%"
                   height="300"
-                  style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-t-lg"
                 ></iframe>
                 <CardTitle>
                   <div className="text-xl font-bold p-6 pb-2">{location.name}</div>
@@ -35,7 +35,7 @@ const Locations = memo(() => {
                 <p className="pb-6 min-h-[4.5em] text-sm">
                   {location.street}, {location.city}, {location.state} {location.zip}
                 </p>
-                <table className="w-full mb-6">
+                <table className="w-full mb-6 md:text-sm xl:text-base">
                   <tbody>
                     <tr>
                       <td className="py-1 font-bold">Phone:</td>
@@ -89,15 +89,18 @@ const Locations = memo(() => {
                 </table>
               </CardContent>
               <CardFooter>
-                <div className="w-full flex gap-4">
+                <div className="w-full flex flex-row lg:flex-col xl:flex-row gap-4">
                   <Link
-                    className={buttonVariants({ variant: 'secondary', className: 'w-1/3 lg:w-1/2 !font-bold' })}
+                    className={buttonVariants({
+                      variant: 'secondary',
+                      className: 'w-1/3 md:w-full xl:w-1/2 !font-bold',
+                    })}
                     href={`tel:${location.phone}`}
                   >
                     Call Us
                   </Link>
                   <Link
-                    className={buttonVariants({ className: 'w-2/3 lg:w-1/2 !font-bold' })}
+                    className={buttonVariants({ className: 'w-2/3 md:w-full xl:w-1/2 !font-bold' })}
                     href={companyInfo.requestAppointmentForm}
                     target="_blank"
                   >

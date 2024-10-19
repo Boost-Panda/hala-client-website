@@ -7,7 +7,7 @@ const Contact = memo(function Contact() {
       <iframe
         src={companyInfo.contactForm}
         width="100%"
-        className="h-[60rem] md:h-[44rem]"
+        className="h-[60rem] lg:h-[44rem]"
         id="myIframe"
       ></iframe>
     </div>

@@ -12,7 +12,7 @@ const Services = memo(() => {
 
       <div className="flex flex-wrap justify-center items-center">
         {services.map((service) => (
-          <div key={service.name} className="w-full md:w-1/2 lg:w-1/3 md:p-4 lg:p-10">
+          <div key={service.name} className="w-full md:w-1/2 xl:w-1/3 p-4 lg:p-6">
             <Card>
               <CardImage
                 src={service.image}
@@ -24,7 +24,7 @@ const Services = memo(() => {
               <CardHeader>
                 <CardTitle>{service.name}</CardTitle>
               </CardHeader>
-              <CardContent className="md:min-h-[14em] lg:min-h-[11em]">{service.description}</CardContent>
+              <CardContent className="md:min-h-[14em] lg:min-h-[10rem] xl:min-h-[14rem]">{service.description}</CardContent>
             </Card>
           </div>
         ))}
