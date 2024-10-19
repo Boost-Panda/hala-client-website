@@ -42,4 +42,10 @@ const DoctorPage = ({ params }: { params: { doctor: string } }) => {
   );
 };
 
+export async function generateStaticParams() {
+  return doctors.map((doctor) => ({
+    doctor: doctor.slug,
+  }));
+}
+
 export default DoctorPage;
