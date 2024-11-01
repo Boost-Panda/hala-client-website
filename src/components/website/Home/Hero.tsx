@@ -21,7 +21,7 @@ const Hero = memo(function Hero() {
         <div className="flex flex-col items-center justify-center">
           <Image src="/logos/logo.webp" alt="Logo" width={160} height={160} className="w-32 md:w-48" />
           <h1 className="text-4xl font-bold max-w-3xl text-center leading-snug mt-4">
-            Experience the Artistry of Oral & Maxillofacial Excellence.
+            Experience the Artistry of Oral & Maxillofacial Excellence
           </h1>
           <p className="text-2xl text-center mt-4">Welcome to Associated Oral & Maxillofacial Surgeons</p>
           <Link className={buttonVariants({ size: 'lg', className: 'mt-6' })} href={companyInfo.mainCTA.href}>
