@@ -13,7 +13,7 @@ export const staff = {
       image: '/staff/pamela-philips.webp',
     },
     {
-      name: 'Liz',
+      name: 'Liz Fink',
       title: 'Insurance Coordinator',
       image: '/staff/liz.webp',
     }
