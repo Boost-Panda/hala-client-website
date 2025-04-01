@@ -25,7 +25,7 @@ export function ChatWidget({ orgId }: { orgId: string }) {
       }}
     >
       <iframe
-        src={`http://localhost:3003?orgId=${orgId}&deviceType=${isMobile ? 'mobile' : 'desktop'}`}
+        src={`https://pandy-bot.vercel.app?orgId=${orgId}&deviceType=${isMobile ? 'mobile' : 'desktop'}`}
         width="100%"
         height="100%"
         style={{ border: 'none' }}
