@@ -56,8 +56,8 @@ export function ChatWidget({ orgId }: { orgId: string }) {
     <div
       className="fixed bottom-0 right-0"
       style={{
-        width: isMobile ? '100%' : '27rem',
-        height: isMobile ? '100%' : '38rem',
+        width: isChatOpen ? (isMobile ? '100%' : '27rem') : '5rem',
+        height: isChatOpen ? (isMobile ? '100%' : '38rem') : '5rem',
         zIndex: 1000,
       }}
     >
