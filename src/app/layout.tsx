@@ -1,4 +1,6 @@
-import type { Metadata } from 'next';
+'use client';
+
+import Script from 'next/script';
 import localFont from 'next/font/local';
 import './globals.css';
 import { ChatWidget } from '@/components/website/Chat';
@@ -14,11 +16,6 @@ const geistMono = localFont({
   weight: '100 900',
 });
 
-export const metadata: Metadata = {
-  title: 'Associated Oral & Maxillofacial Surgeons',
-  description: 'Excellence in Oral & Maxillofacial Surgery',
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,6 +23,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Associated Oral & Maxillofacial Surgeons</title>
+        <meta name="description" content="Excellence in Oral & Maxillofacial Surgery" />
+        <Script id="google-analytics-src" async src="https://www.googletagmanager.com/gtag/js?id=G-KNKRSQ0L48"></Script>
+        <Script id="google-analytics-script">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-KNKRSQ0L48');
+          `}
+        </Script>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <ChatWidget orgId={process.env.NEXT_PUBLIC_PANDY_ORG_ID || ''} />
