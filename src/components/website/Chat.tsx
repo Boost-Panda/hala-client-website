@@ -56,8 +56,8 @@ export function ChatWidget({ orgId }: { orgId: string }) {
     <div
       className="fixed bottom-0 right-0"
       style={{
-        width: isChatOpen ? (isMobile ? '100%' : '27rem') : '5rem',
-        height: isChatOpen ? (isMobile ? '100%' : '38rem') : '5rem',
+        width: isChatOpen ? (isMobile ? '100%' : '27rem') : isMobile ? '100%' : '22rem',
+        height: isChatOpen ? (isMobile ? '100%' : '38rem') : '10rem',
         zIndex: 1000,
       }}
     >
@@ -66,7 +66,7 @@ export function ChatWidget({ orgId }: { orgId: string }) {
         // src={`http://localhost:3003?orgId=${orgId}&deviceType=${isMobile ? 'mobile' : 'desktop'}`}
         width="100%"
         height="100%"
-        style={{ border: 'none' }}
+        style={{ border: 'none', background: 'transparent' }}
         id="myIframe"
       />
     </div>
