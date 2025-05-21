@@ -22,7 +22,7 @@ export const locations: Location[] = [
       sunday: 'Closed'
     },
     timezone: 'EST',
-    registrationForm: 'https://mysecurepractice.com/Truform/30617486-fcaa-4eae-8919-71f3f6ba00c9/Submission/Create',
+    registrationForm: 'https://hala-form.vercel.app/?formId=4FBl2hAJnGkcnCUysOdd',
     referralForm: 'https://hala-form.vercel.app/?formId=nsqRS8IP9j98CWQUwfpS',
   },
   {
@@ -46,7 +46,7 @@ export const locations: Location[] = [
       sunday: 'Closed'
     },
     timezone: 'EST',
-    registrationForm: 'https://mysecurepractice.com/Truform/52017d9f-5898-42e1-947c-c156ce20c12f/Submission/Create',
+    registrationForm: 'https://hala-form.vercel.app/?formId=3AeQeaHPQmXvT7DHlfw0',
     referralForm: 'https://hala-form.vercel.app/?formId=TX713jB8K4yICxf9h2vn',
   },
   {
@@ -70,7 +70,7 @@ export const locations: Location[] = [
       sunday: 'Closed'
     },
     timezone: 'EST',
-    registrationForm: 'https://mysecurepractice.com/Truform/4b7b9640-1fd9-4b8f-bc22-85dc87114295/Submission/Create',
+    registrationForm: 'https://hala-form.vercel.app/?formId=mZH0V5NAj5PtnJOm669G',
     referralForm: 'https://hala-form.vercel.app/?formId=nyOfrhFmRgbQsSjcfc56',
   },
 ];
