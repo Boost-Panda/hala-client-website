@@ -3,7 +3,7 @@ import { Location } from '@/lib/types';
 export const locations: Location[] = [
   {
     name: 'Frederick, MD',
-    phone: '+13014506717',
+    phone: '+13016940870',
     email: 'frederickxrays@omaxdocs.com',
     street: '6550 Mercantile Drive E Suite 101',
     city: 'Frederick',
@@ -27,7 +27,7 @@ export const locations: Location[] = [
   },
   {
     name: 'Hagerstown, MD',
-    phone: '+13015070064',
+    phone: '+13017332500',
     email: 'hagerstownxrays@omaxdocs.com',
     street: '1144 Opal Court',
     city: 'Hagerstown',
@@ -51,7 +51,7 @@ export const locations: Location[] = [
   },
   {
     name: 'Martinsburg, WV',
-    phone: '+13045775063',
+    phone: '+13042630991',
     email: 'xraywv@omaxdocs.com',
     street: '1007 Sushruta Dr',
     city: 'Martinsburg',

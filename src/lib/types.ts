@@ -31,7 +31,7 @@ export type Location = {
 
 export interface CompanyInfo {
   name: string;
-  phone: string;
+  phone?: string;
   email?: string;
   website: string;
   social: {

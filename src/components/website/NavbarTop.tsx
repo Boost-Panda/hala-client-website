@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 
 import { formatPhoneNumber } from '@/lib/utils';
 import { companyInfo } from '@/lib/companyInfo';
+import { locations } from '@/lib/locations';
 
 import { Mail, Phone } from 'lucide-react';
 import { faFacebookF, faInstagram, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -14,20 +15,25 @@ const FontAwesomeIcon = dynamic(() => import('@fortawesome/react-fontawesome').t
 const NavbarTop = () => {
   return (
     <div className="bg-primary text-white">
-      <div className="flex justify-between container mx-auto text-sm py-3 px-4">
+      <div className="flex flex-col lg:flex-row lg:justify-between container mx-auto text-sm py-3 px-4 gap-2">
         {companyInfo.email && (
           <span className="hidden lg:flex items-center gap-2">
             <Mail className="h-4 w-4" />
             <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
           </span>
         )}
-        {companyInfo.phone && (
-          <span className="flex items-center gap-2">
-            <Phone className="h-4 w-4" />
-            <a href={`tel:${companyInfo.phone}`}>{formatPhoneNumber(companyInfo.phone)}</a>
-          </span>
-        )}
-        <div className="flex gap-6">
+        <div className="flex items-center gap-4 flex-wrap justify-center lg:justify-start">
+          {locations.map((location) => (
+            <span key={location.name} className="flex items-center gap-2">
+              <Phone className="h-4 w-4" />
+              <a href={`tel:${location.phone}`} className="hover:underline">
+                <span className="hidden sm:inline">{location.name.replace(', MD', '').replace(', WV', '')}: </span>
+                {formatPhoneNumber(location.phone)}
+              </a>
+            </span>
+          ))}
+        </div>
+        <div className="flex gap-6 justify-center lg:justify-end">
           {companyInfo.social.facebook && (
             <a href={companyInfo.social.facebook} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebookF} className="h-4 w-4" />

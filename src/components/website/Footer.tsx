@@ -21,12 +21,20 @@ const Footer = memo(function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-sm">
           <div className="flex flex-col items-center">
             <Image src="/logos/logo-white.png" alt={companyInfo.name} width={240} height={240} />
-            <p className="mb-6 mt-6">
-              <a href={`tel:${companyInfo.phone}`}>{formatPhoneNumber(companyInfo.phone)}</a>
-              <br />
-              <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
-              <br />
-            </p>
+            <div className="mb-6 mt-6 space-y-1">
+              {companyInfo.phone && (
+                <>
+                  <a href={`tel:${companyInfo.phone}`}>{formatPhoneNumber(companyInfo.phone)}</a>
+                  <br />
+                </>
+              )}
+              {companyInfo.email && (
+                <>
+                  <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
+                  <br />
+                </>
+              )}
+            </div>
           </div>
           <div>
             <h3 className="text-2xl font-bold mb-8">Locations</h3>
