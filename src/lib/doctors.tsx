@@ -98,38 +98,34 @@ export const doctors: Doctor[] = [
     ),
   },
   {
-    slug: 'dr-haddad',
-    name: 'Jay I. Haddad',
-    image: '/doctors/jay-haddad.webp',
-    title: 'DDS',
+    slug: 'dr-khan',
+    name: 'Sohaib F. Khan',
+    image: '/doctors/Dr. Khan.jpeg',
+    title: 'DDS, MS',
     about: (
       <>
         <p>
-          Dr. Haddad graduated in 1987 from the University of Texas Health Science Center Dental Branch. Upon
-          graduation, he was commissioned as an officer in the US Army and completed the Advanced General Dentistry
-          Program.
+          Dr. Sohaib Fazeel Khan is an oral and maxillofacial surgeon dedicated to delivering comprehensive,
+          patient-centered surgical care with a commitment to clinical excellence and integrity. He is licensed to
+          practice in Maryland, Virginia, and Washington, D.C., and provides a full scope of oral and maxillofacial
+          procedures with a focus on precision, safety, and compassion.
         </p>
         <p>
-          For the next 8 years, Dr. Haddad practiced general dentistry and earned his Fellowship of the Academy of
-          General Dentistry in 1995. He then pursued the field he truly loved the most, Oral and Maxillofacial Surgery.
-          Dr. Haddad completed his residency in 2001 at Tripler Army Medical Center in Hawaii. He also attained board
-          certification in Oral and Maxillofacial Surgery and Dental Anesthesiology.
+          A native of Northern Virginia, Dr. Khan earned his undergraduate degree from George Mason University,
+          followed by a Master of Science in Physiology and Biophysics from Georgetown University. He went on to
+          receive his Doctor of Dental Surgery (DDS) degree from Howard University College of Dentistry.
         </p>
         <p>
-          After his residency, Dr. Haddad was assigned to Walter Reed Army Medical Center in Washington D.C. He spent
-          the rest of his time in the military as a mentor in the Oral and Maxillofacial Surgery Program. He has treated
-          hundreds of soldiers, many of whom had extensive and complex facial trauma. Upon his completion of 20 years of
-          military service, Dr. Haddad decided to pursue civilian practice. He was honored to receive the &quot;Educator
-          of the Year&quot; award before he transitioned to civilian life.
+          Dr. Khan completed internships in oral and maxillofacial surgery at the University of Maryland Medical
+          Center in Baltimore and the University of Missouri–Kansas City, where he trained at Truman Medical Center.
+          He subsequently returned to Howard University to complete a rigorous residency in oral and maxillofacial
+          surgery, gaining extensive clinical experience in dentoalveolar surgery, dental implant placement, bone
+          grafting, maxillofacial trauma, orthognathic surgery, and the management of benign oral pathology.
         </p>
         <p>
-          Dr. Haddad practiced with Associated Oral & Maxillofacial Surgeons for one year then built his private
-          practice in Howard County. After thirteen years in private practice, Dr. Haddad sold his practice and decided
-          to return to work with Associated Oral & Maxillofacial Surgeons.
-        </p>
-        <p>
-          Dr. Haddad&apos;s passion for education was exemplified by earning two master&apos;s degrees (Health
-          Administration and Financial Planning) during his time in private practice.
+          Outside the operating room, Dr. Khan is an avid traveler and fitness enthusiast. He enjoys exploring natural
+          beauty, experiencing diverse culinary traditions, and engaging in outdoor adventures that challenge and
+          inspire him.
         </p>
       </>
     ),
