@@ -17,8 +17,8 @@ export const navLinks: NavLink[] = [
         href: '/about/dr-chaudhary',
       },
       {
-        name: 'Dr. Haddad',
-        href: '/about/dr-haddad',
+        name: 'Dr. Khan',
+        href: '/about/dr-khan',
       },
       {
         name: 'Meet our Staff',
